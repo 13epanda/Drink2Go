@@ -91,7 +91,7 @@ const copy = (done) => {
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
   ], {
-    base: 'source'
+    base: 'src'
   })
     .pipe(gulp.dest('build'))
   done();
