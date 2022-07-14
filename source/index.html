@@ -26,57 +26,58 @@
             <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet.svg">
             <img class="page-header__logo" src="img/mobile/logo-mobile.svg" width="32" height="36" alt="Логотип магазина Drink2Go.">
           </picture>
-          <p class="page-header__title">Интернет-магазин кофейных напитков</p>
         </a>
-        <!-- ПОСМОТРИ НА НАЗВАНИЯ КЛАССОВ ↓ -->
-        <ul class="page-header__user-nav">
-          <li class="page-header__item">
-            <a class="page-header__link page-header__link--user" href="#">
-              <span>Войти</span>
-            </a>
-            <a class="page-header__link page-header__link--user visually-hidden" href="#">
-              <span>Выйти</span>
-            </a>
-          </li>
-          <li class="page-header__item">
-            <a class="page-header__link page-header__link--cart" href="#">
-              <span>Корзина</span>
-            </a>
-          </li>
-        </ul>
+        <a class="page-header__title">
+          <p>Интернет-магазин кофейных напитков</p>
+        </a>
         <!--
           При инициализации header-nav.js
           добавляется класс page-header__wrapper-nav--closed
           при клике на кнопку page-header__toggle класс меняется на page-header__wrapper-nav--opened
         -->
-        <nav class="page-header__wrapper-nav">
+        <nav class="page-header__wrapper-nav page-header__wrapper-nav--closed">
           <button class="page-header__toggle" type="button">
             <span class="visually-hidden">Открыть меню.</span>
           </button>
           <div class="page-header__nav">
             <ul class="page-header__list">
               <li class="page-header__item">
-                <a class="page-header__link page-header__link--special page-header__link--special-active">
+                <a class="page-header__link page-header__link--active">
                   Главная
                 </a>
               </li>
               <li class="page-header__item">
-                <a class="page-header__link page-header__link--special" href="#" aria-label="Перейти на страницу каталога продукции.">
+                <a class="page-header__link" href="#" aria-label="Перейти на страницу каталога продукции.">
                   Каталог
                 </a>
               </li>
               <li class="page-header__item">
-                <a class="page-header__link page-header__link--special" href="#" aria-label="Перейти на страницу доставки.">
+                <a class="page-header__link" href="#" aria-label="Перейти на страницу доставки.">
                   Доставка
                 </a>
               </li>
               <li class="page-header__item">
-                <a class="page-header__link page-header__link--special" href="#" aria-label="Перейти на страницу о нас.">
+                <a class="page-header__link" href="#" aria-label="Перейти на страницу о нас.">
                   О нас
                 </a>
               </li>
             </ul>
           </div>
+          <ul class="page-header__user-nav">
+            <li class="page-header__user">
+              <a class="page-header__user-link" href="#">
+                <span>Войти</span>
+              </a>
+              <a class="page-header__link--close visually-hidden" href="#">
+                <span>Выйти</span>
+              </a>
+            </li>
+            <li class="page-header__cart">
+              <a class="page-header__cart-link" href="#">
+                <span>Корзина</span>
+              </a>
+            </li>
+          </ul>
         </nav>
       </section>
     </header>
