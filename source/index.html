@@ -20,22 +20,24 @@
   <body>
     <header class="page-header">
       <section class="page-header__wrapper">
-        <a class="page-header__logo">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/desktop/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet.svg">
-            <img class="page-header__logo" src="img/mobile/logo-mobile.svg" width="32" height="36" alt="Логотип магазина Drink2Go.">
-          </picture>
-        </a>
-        <a class="page-header__title">
-          <p>Интернет-магазин кофейных напитков</p>
-        </a>
+        <div class="page-header__wrapper-logo">
+          <a class="page-header__logo">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/desktop/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet.svg">
+              <img class="page-header__logo" src="img/mobile/logo-mobile.svg" width="32" height="36" alt="Логотип магазина Drink2Go.">
+            </picture>
+          </a>
+          <a class="page-header__title">
+            <span>Интернет-магазин кофейных напитков</span>
+          </a>
+        </div>
         <!--
           При инициализации header-nav.js
           добавляется класс page-header__wrapper-nav--closed
           при клике на кнопку page-header__toggle класс меняется на page-header__wrapper-nav--opened
         -->
-        <nav class="page-header__wrapper-nav page-header__wrapper-nav--closed">
+        <nav class="page-header__wrapper-nav">
           <button class="page-header__toggle" type="button">
             <span class="visually-hidden">Открыть меню.</span>
           </button>
@@ -63,22 +65,31 @@
               </li>
             </ul>
           </div>
-          <ul class="page-header__user-nav">
-            <li class="page-header__user">
-              <a class="page-header__user-link" href="#">
-                <span>Войти</span>
-              </a>
-              <a class="page-header__link--close visually-hidden" href="#">
-                <span>Выйти</span>
-              </a>
-            </li>
-            <li class="page-header__cart">
-              <a class="page-header__cart-link" href="#">
-                <span>Корзина</span>
-              </a>
-            </li>
-          </ul>
         </nav>
+        <ul class="page-header__user-nav">
+          <li class="page-header__user">
+            <a class="page-header__user-link" href="#">
+              <svg width="16" height="16">
+                <use xlink:href="img/sprite.svg#user"></use>
+              </svg>
+              <span>Войти</span>
+            </a>
+            <a class="page-header__link--close visually-hidden" href="#">
+              <svg width="16" height="16" >
+                <use xlink:href="img/sprite.svg#user"></use>
+              </svg>
+              <span>Выйти</span>
+            </a>
+          </li>
+          <li class="page-header__cart">
+            <a class="page-header__cart-link" href="#">
+              <svg width="16" height="16">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+              <span>Корзина</span>
+            </a>
+          </li>
+        </ul>
       </section>
     </header>
 
@@ -90,9 +101,9 @@
           <p class="promo__name">Декаф Флэт Уайт</p>
           <p class="promo__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
           <picture class="promo__picture">
-            <source type="image/webp"  media="(min-width: 1440px)" srcset="img/desktop/flat_white_img.wesourсe/img1x, img/desktop/flat_white_img@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/flat_white_img.wesourсe/img1x, img/tablet/flat_white_img@2x.webp 2x">
-            <source type="image/webp"  srcset="img/mobile/flat_white_img.wesourсe/img1x, img/mobile/flat_white_img@2x.webp 2x">
+            <source type="image/webp"  media="(min-width: 1440px)" srcset="img/desktop/flat_white_img.webp, img/desktop/flat_white_img@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/flat_white_img.webp, img/tablet/flat_white_img@2x.webp 2x">
+            <source type="image/webp"  srcset="img/mobile/flat_white_img.webp, img/mobile/flat_white_img@2x.webp 2x">
 
             <source media="(min-width: 1440px)" srcset="img/desktop/flat_white_img.png, img/desktop/flat_white_img@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/tablet/flat_white_img.png, img/tablet/flat_white_img@2x.png 2x">
