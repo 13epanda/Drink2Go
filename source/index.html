@@ -15,9 +15,14 @@
     <link rel="preload" href="fonts/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css" type="text/css">
-
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
   </head>
   <body>
     <header class="page-header">
@@ -97,10 +102,10 @@
 
     <main class="page-main">
       <h1 class="visually-hidden">Интернет-магазин кофейных напитков.</h1>
-      <header class="page-main__main-slider swiper">
-        <ol class="swiper-wrapper">
-          <li class="swiper-slide">
-            <div class="page-main__new-product new-product">
+      <section class="page-main__promo swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="page-main__new-product new-product new-product--1">
               <picture class="new-product__picture">
                 <source type="image/webp"  media="(min-width: 1440px)" srcset="img/desktop/flat_white_img.webp, img/desktop/flat_white_img@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/flat_white_img.webp, img/tablet/flat_white_img@2x.webp 2x">
@@ -120,11 +125,34 @@
                 </a>
               </div>
             </div>
-          </li>
-          <li>5</li>
-        </ol>
-      </header>
-      <section class="page-main__advantages advantages page-content">
+          </div>
+          <div class="swiper-slide">
+            <div class="page-main__new-product new-product new-product--2">
+              <picture class="new-product__picture">
+                <source type="image/webp"  media="(min-width: 1440px)" srcset="img/desktop/flat_white_img.webp, img/desktop/flat_white_img@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/flat_white_img.webp, img/tablet/flat_white_img@2x.webp 2x">
+                <source type="image/webp"  srcset="img/mobile/flat_white_img.webp, img/mobile/flat_white_img@2x.webp 2x">
+
+                <source media="(min-width: 1440px)" srcset="img/desktop/flat_white_img.png, img/desktop/flat_white_img@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/tablet/flat_white_img.png, img/tablet/flat_white_img@2x.png 2x">
+                <img class="new-product__img" src="img/mobile/flat_white_img.png" srcset="img/mobile/flat_white_img@2x.png" width="280" height="280" alt="Декаф Флэт Уайт.">
+              </picture>
+              <p class="new-product__badge">Новинка!</p>
+              <h2 class="new-product__name">Декаф Флэт Уайт</h2>
+              <p class="new-product__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+              <div class="new-product__buy">
+                <p class="new-product__price"><del>295</del>225₽</p>
+                <a class="new-product__button button button-primary" href="#" aria-label="Заказать Декаф Флэт Уайт.">
+                  <span>Заказать</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </section>
+      <section class="page-main__advantages advantages">
         <p class="advantages__subtitle">Преимущества</p>
         <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
         <ul class="advantages__list">
@@ -442,5 +470,7 @@
 
     <script src="/js/header-nav.js" type="text/javascript"></script>
     <script src="/js/map.js" type="text/javascript"></script>
+
+
   </body>
 </html>
