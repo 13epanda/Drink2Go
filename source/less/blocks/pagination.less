@@ -1,0 +1,92 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  column-gap: 20px;
+  width: fit-content;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding-left: 0;
+
+  a {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+  }
+}
+
+.pagination__item {
+  list-style-type: none;
+}
+
+.pagination__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
+  left: 20px;
+  top: 20px;
+  background-color: @base-white;
+  border-radius: 4px;
+  color: @base-primary;
+}
+
+.pagination__link--current {
+  background-color: transparent;
+  color: @base-black;
+}
+
+.pagination__link--next svg {
+  transform: rotate(180deg);
+}
+
+.pagination__link span {
+  display: none;
+}
+
+.pagination__link:hover,
+.pagination__link:focus {
+  background-color: @primary-lighter;
+  color: @base-white;
+}
+
+.pagination__link:active {
+  background-color: @primary-darker;
+}
+
+.pagination__link:disabled {
+  background-color: @light-grey;
+}
+
+.pagination__link--prev svg,
+.pagination__link--next svg {
+  fill: @base-primary
+}
+
+.pagination__link--prev:hover svg,
+.pagination__link--prev:focus svg,
+.pagination__link--prev:active svg,
+.pagination__link--next:hover svg,
+.pagination__link--next:focus svg,
+.pagination__link--next:active svg {
+  fill: @base-white
+}
+
+@media (min-width: @tablet-width) {
+  .pagination__link span {
+    display: block;
+    padding: 8px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .pagination__link svg {
+    display: none;
+  }
+}
