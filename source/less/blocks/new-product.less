@@ -4,11 +4,20 @@
   list-style-type: none;
 }
 .new-product {
-  padding: 20px 0 60px;
+  padding: 20px 20px 60px;
   text-align: center;
   font-family: "Montserrat", "Arial", sans-serif;
   color: @base-black;
+}
+
+.new-product--1 {
   background-color: @flat-white;
+}
+.new-product--2 {
+  background-color: @lavender-latte;
+}
+.new-product--3 {
+  background-color: @espresso;
 }
 
 .new-product__badge {
@@ -42,4 +51,18 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 25px;
+}
+
+.new-product__price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+
+  del {
+    margin-right: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    color: @base-primary;
+  }
+
 }
