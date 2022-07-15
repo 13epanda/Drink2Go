@@ -183,6 +183,7 @@
               <legend class="filter__title">Цена</legend>
               <div class="filter__range">
                 <div class="input-range">
+                  <input type="range">
                   <button class="input-range__thumb input-range__thumb-min" type="button">
                     <span class="visually-hidden">Изменить минимальную цену.</span>
                   </button>
@@ -191,9 +192,9 @@
                   </button>
                 </div>
                 <div class="filter__scale input-text">
-                  <input class="input-text__input" type="number" value="0" name="min-price">
+                  <input class="input-text__input" type="number" placeholder="0" min="0" name="min-price">
                   <span>-</span>
-                  <input class="input-text__input" type="number" value="1000" name="max-price">
+                  <input class="input-text__input" type="number" value="900" max="1000" name="max-price">
                 </div>
               </div>
             </fieldset>
@@ -202,7 +203,7 @@
               <ul class="filter__list">
                 <li class="filter__item">
                   <label class="input-radio">
-                    <input class="input-radio__input" type="radio" name="any" value="any">
+                    <input class="input-radio__input" type="radio" name="any" value="any" checked>
                     <span class="input-radio__mark"></span>
                     <span class="input-radio__label">Неважно</span>
                   </label>
@@ -223,7 +224,7 @@
                 </li>
                 <li class="filter__item">
                   <label class="input-radio">
-                    <input class="input-radio__input" type="radio" name="no-milk" value="no-milk">
+                    <input class="input-radio__input" type="radio" name="no-milk" value="no-milk" disabled>
                     <span class="input-radio__mark"></span>
                     <span class="input-radio__label">Без молока</span>
                   </label>
@@ -231,7 +232,7 @@
               </ul>
             </fieldset>
             <fieldset class="filter__group">
-              <legend class="catalog-filter-title">Страна произрастания</legend>
+              <legend class="filter__title">Страна произрастания</legend>
               <ul class="filter__list">
                 <li class="filter__item">
                   <label class="input-checkbox">
@@ -263,39 +264,28 @@
                 </li>
                 <li class="filter__item">
                   <label class="input-checkbox">
-                    <input class="input-checkbox__input" type="checkbox" name="peru">
+                    <input class="input-checkbox__input" type="checkbox" name="peru" disabled>
                     <span class="input-checkbox__mark"></span>
                     <span class="input-checkbox__label">Перу</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
-            <button class="button button-primary" type="reset"><span>Сбросить фильтр</span></button>
+            <button class="button button-secondary" type="reset">
+              <span>Сбросить фильтр</span>
+            </button>
           </form>
           <div class="catalog__right-column">
-            <div class="catalog__sorting-wrap">
-              <form class="catalog__sorting-type" action="https://echo.htmlacademy.ru/" method="get">
-                <label for="sorting">Сортировка:</label>
-                <select class="select-control" id="sorting" name="sorting">
-                  <option value="popular">Сначала популярное</option>
-                  <option value="cheap">Сначала дешевле</option>
-                  <option value="expensive">Сначала дороже</option>
-                </select>
-                <a href="#" class="sorting-from-more">
-                  <svg width="11" height="10" aria-hidden="true" focusable="false" fill="#000000" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.5 0 11 10H0"/>
-                  </svg>
-                  <span class="visually-hidden">Сортировка от большего к меньшему.</span>
-                </a>
-                <a href="#" class="sorting-from-smaller">
-                  <svg width="11" height="10" aria-hidden="true" focusable="false" fill="#000000" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.5 10 0 0h11"/>
-                  </svg>
-                  <span class="visually-hidden">Сортировка от меньшего к большему.</span>
-                </a>
-                <button class="visually-hidden" type="submit">Отсортировать продукты.</button>
-              </form>
-            </div>
+            <form class="catalog__sorting" action="https://echo.htmlacademy.ru/" method="get">
+              <label class="catalog__sorting-text" for="sorting">Сортировка:</label>
+              <select class="catalog__select select-control" id="sorting" name="sorting">
+                <option value="default" selected>по умолчанию</option>
+                <option value="expensive">сначала дорогие</option>
+                <option value="cheap">сначала дешёвые</option>
+                <option value="popular">высокий рейтинг</option>
+              </select>
+              <button class="visually-hidden" type="submit">Отсортировать продукты.</button>
+            </form>
             <div class="catalog__products">
               <ul class="catalog__list">
                 <li class="catalog__product product">

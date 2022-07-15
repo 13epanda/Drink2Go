@@ -73,8 +73,28 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  text-align: center;
   border: 2px solid @primary-lighter;
+  border-radius: 4px;
   box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input-text__input::placeholder {
+  border-color: @light-grey;
+}
+
+.input-text__input:focus {
+  border-color: @primary-darker;
+}
+
+.input-text__input:disabled {
+  color: @base-grey;
+  border-color: @light-grey;
 }
 
 /* CHECKBOX */
@@ -104,16 +124,21 @@
   box-sizing: border-box;
 }
 
-.input-checkbox__input:checked ~ .input-checkbox__mark::before {
+.input-checkbox__input ~ .input-checkbox__mark::before {
   position: absolute;
   content: "";
   top: 0;
-  left: auto;
-  right: 0;
+  left: 0;
+  right: auto;
   width: 20px;
   height: 20px;
   background-color: @base-white;
   border-radius: 50%;
+}
+
+.input-checkbox__input:checked ~ .input-checkbox__mark::before {
+  left: auto;
+  right: 0;
 }
 
 .input-checkbox__span {
@@ -177,10 +202,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: block;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: @base-primary;
+}
+
+.input-radio__input:not(:checked) ~ .input-radio__mark::before {
+  content: none;
 }
 
 .input-radio__span {
@@ -215,8 +245,9 @@
 
 .input-range {
   position: relative;
-  width: 318px;
-  height: 20px;
+  width: 100%;
+  max-width: 318px;
+  height: 2px;
   cursor: pointer;
   background: #ffffff;
   border: none;
@@ -298,3 +329,25 @@
   outline: 1px solid @special-grey;
 }
  */
+
+/* SELECT */
+
+.select-control {
+  width: 165px;
+  height: 32px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  color: @base-primary;
+  border-radius: 4px;
+}
+
+.select-control:hover,
+.select-control:focus {
+  background-color: @base-secondary;
+}
+
+.select-control:active {
+
+}
