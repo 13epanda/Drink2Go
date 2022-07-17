@@ -3,6 +3,7 @@
   flex-direction: column;
   row-gap: 24px;
   text-align: left;
+  padding-bottom: 36px;
 }
 
 .filter__group {
@@ -28,3 +29,46 @@
   margin-top: 20px;
   list-style-type: none;
 }
+
+.filter__range {
+  margin-top: 20px;
+
+  .input-range {
+    margin-bottom: 22px;
+  }
+}
+
+.filter__scale {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+
+.filter__separator {
+  width: 10px;
+  height: 2px;
+  background-color: @base-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .filters {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 40px;
+    padding-bottom: 40px;
+  }
+
+  .filters__reset {
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filters {
+    flex-direction: column;
+    width: 318px;
+  }
+}
+

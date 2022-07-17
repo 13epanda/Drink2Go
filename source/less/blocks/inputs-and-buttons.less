@@ -64,7 +64,7 @@
 }
 
 .input-text__input {
-  width: 134px;
+  width: 125px;
   height: 40px;
   padding: 8px 10px;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -244,89 +244,119 @@ input::-webkit-inner-spin-button {
   position: relative;
   width: 100%;
   max-width: 318px;
-  height: 2px;
+  height: 24px;
   cursor: pointer;
-  background: #ffffff;
   border: none;
   box-sizing: border-box;
 }
 
+.input-range__input {
+  z-index: 5;
+  opacity: 0;
+}
+
+.input-range__track {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+  background-color: @light-grey;
+}
+
+.input-range__track--chosen {
+  height: 4px;
+}
+
 .input-range__thumb {
   position: absolute;
-  left: 50%;
-  transform: translateX(-100%);
-  height: 24px;
-  width: 24px;
+  display: block;
+  margin: auto 0;
+  height: 21px;
+  width: 21px;
   box-sizing: border-box;
   border-radius: 50%;
   background-color: @base-white;
-  cursor: pointer;
-  border: 2px solid @primary-lighter;
+  border: 2px solid @base-white;
+  outline: 2px solid @primary-lighter;
+}
+
+.input-range__thumb-min {
+  left: 0;
+}
+
+.input-range__thumb-max {
+  left: 90%;
 }
 
 /* Стилизация для браузеров */
-/*
-.input-range::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 6px;
-  border-radius: 6px;
-  cursor: pointer;
-  background: #dcdcdc;
-  border: 1px solid @special-grey;
-  box-sizing: border-box;
-}
-.input-range::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 34px;
-  width: 34px;
-  margin-top: -15px;
-  border-radius: 17px;
-  background-color: @base-green;
-  cursor: pointer;
-  border: 13px solid #ffffff;
-  outline: 1px solid @special-grey;
-}
-.input-range::-moz-range-track {
-  width: 100%;
-  height: 6px;
-  border-radius: 6px;
-  cursor: pointer;
-  background: #dcdcdc;
-  border: 1px solid @special-grey;
-  box-sizing: border-box;
-}
-.input-range::-moz-range-thumb {
-  height: 34px;
-  width: 34px;
-  margin-top: -15px;
-  border-radius: 17px;
-  background-color: @base-green;
-  cursor: pointer;
-  border: 13px solid #ffffff;
-  outline: 1px solid @special-grey;
-}
-.input-range::-ms-track {
-  width: 100%;
-  height: 6px;
-  border-radius: 6px;
-  cursor: pointer;
-  background: #dcdcdc;
-  border: 1px solid @special-grey;
-  box-sizing: border-box;
-}
-.input-range::-ms-thumb {
-  height: 34px;
-  width: 34px;
-  margin-top: -15px;
-  border-radius: 17px;
-  background-color: @base-green;
-  cursor: pointer;
-  border: 13px solid #ffffff;
-  outline: 1px solid @special-grey;
-}
- */
 
+.input-range__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  outline: none;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.input-range__input::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 4px;
+}
+.input-range__input::-moz-range-track {
+  -moz-appearance: none;
+  height: 4px;
+}
+.input-range__input::-ms-track {
+  appearance: none;
+  height: 4px;
+}
+.input-range__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  background-color: @base-white;
+  border: 2px solid @primary-lighter;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -12px;
+  pointer-events: auto;
+  box-sizing: border-box;
+}
+.input-range__input::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  background-color: @base-white;
+  border: 2px solid @primary-lighter;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.input-range__input::-ms-thumb {
+  appearance: none;
+  height: 24px;
+  width: 24px;
+  background-color: @base-white;
+  border: 2px solid @primary-lighter;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.input-range__input::-webkit-slider-thumb,
+.input-range__input::-moz-range-thumb,
+.input-range__input::-ms-thumb {
+  background-color: @primary-lighter;
+}
 /* SELECT */
 
 .select-control {
@@ -347,4 +377,14 @@ input::-webkit-inner-spin-button {
 
 .select-control:active {
 
+}
+
+@media (min-width: @tablet-width) {
+  .input-range {
+    width: 223px;
+  }
+
+  .input-text__input {
+    width: 96px;
+  }
 }

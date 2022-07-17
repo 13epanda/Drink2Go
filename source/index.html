@@ -183,18 +183,22 @@
               <legend class="filter__title">Цена</legend>
               <div class="filter__range">
                 <div class="input-range">
-                  <input type="range">
-                  <button class="input-range__thumb input-range__thumb-min" type="button">
+                  <div class="input-range__track"></div>
+                  <div class="input-range__track input-range__track--chosen"></div>
+                  <input class="input-range__input" type="range" min="0" max="1000" value="0" id="range-price-min" oninput="slideOne()">
+                  <input class="input-range__input" type="range" min="0" max="1000" value="900" id="range-price-max" oninput="slideTwo()">
+
+                  <div class="input-range__thumb input-range__thumb-min">
                     <span class="visually-hidden">Изменить минимальную цену.</span>
-                  </button>
-                  <button class="input-range__thumb input-range__thumb-max" type="button">
+                  </div>
+                  <div class="input-range__thumb input-range__thumb-max">
                     <span class="visually-hidden">Изменить максимальную цену.</span>
-                  </button>
+                  </div>
                 </div>
                 <div class="filter__scale input-text">
-                  <input class="input-text__input" type="number" placeholder="0" min="0" name="min-price">
-                  <span>-</span>
-                  <input class="input-text__input" type="number" value="900" max="1000" name="max-price">
+                  <input class="input-text__input" type="number" placeholder="0" min="0" name="min-price" id="price-min">
+                  <div class="filter__separator"></div>
+                  <input class="input-text__input" type="number" value="900" max="1000" name="max-price" id="price-max">
                 </div>
               </div>
             </fieldset>
@@ -271,7 +275,7 @@
                 </li>
               </ul>
             </fieldset>
-            <button class="button button-secondary" type="reset">
+            <button class="filters__reset button button-secondary" type="reset">
               <span>Сбросить фильтр</span>
             </button>
           </form>
@@ -513,7 +517,7 @@
 
     <script src="/js/header-nav.js" type="text/javascript"></script>
     <script src="/js/map.js" type="text/javascript"></script>
-
+    <script src="/js/input-range.js" type="text/javascript"></script>
 
   </body>
 </html>
