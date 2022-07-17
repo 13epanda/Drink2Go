@@ -194,7 +194,7 @@ input::-webkit-inner-spin-button {
   box-sizing: border-box;
 }
 
-.input-radio__input:checked ~ .input-radio__mark::before {
+.input-radio__input ~ .input-radio__mark::before {
   position: absolute;
   content: "";
   top: 50%;
@@ -204,11 +204,10 @@ input::-webkit-inner-spin-button {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: @base-primary;
 }
 
-.input-radio__input:not(:checked) ~ .input-radio__mark::before {
-  content: none;
+.input-radio__input:checked ~ .input-radio__mark::before {
+  background-color: @base-primary;
 }
 
 .input-radio__span {
