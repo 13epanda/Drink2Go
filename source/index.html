@@ -405,39 +405,42 @@
 
     <footer class="page-footer">
       <section class="page-footer__map map" id="map"></section>
-      <section class="page-footer__wrapper page-content">
-        <a class="page-footer__logo">
-          <picture>
-            <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet.svg">
-            <img class="page-footer__logo" src="img/mobile/logo-mobile.svg" width="82" height="36" alt="Логотип магазина Drink2Go.">
-          </picture>
-        </a>
-        <ul class="page-footer__social">
-          <li class="page-footer__item">
-            <a class="page-footer__link" href="https://vk.com/htmlacademy" aria-label="Перейти на нашу страницу в Вконтакте.">
-              <svg class="page-footer__vkontakte" width="20" height="20" aria-hidden="true" focusable="false">
-                <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="page-footer__item">
-            <a class="page-footer__link" href="#" aria-label="Перейти на нашу страницу в Printerest.">
-              <svg class="page-footer__pinterest" width="22" height="22" aria-hidden="true" focusable="false">
-                <use xlink:href="img/sprite.svg#icon-pinterest"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="page-footer__item">
-            <a class="page-footer__link" href="#" aria-label="Перейти на нашу страницу в Фейсбуке.">
-              <svg class="page-footer__ok" width="20" height="20" aria-hidden="true" focusable="false">
-                <use xlink:href="img/sprite.svg#icon-ok"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <div class="page-footer__menu">
+      <section class="page-footer__wrapper">
+        <div class="page-footer__header">
+          <a class="page-footer__logo">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/desktop/logo-desktop.svg">
+              <img src="img/tablet/logo-tablet.svg" width="82" height="36" alt="Логотип магазина Drink2Go.">
+            </picture>
+            <p class="page-footer__logo-text">Интернет-магазин кофейных напитков</p>
+          </a>
+          <ul class="page-footer__social">
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="https://vk.com/htmlacademy" aria-label="Перейти на нашу страницу в Вконтакте.">
+                <svg class="page-footer__vkontakte" width="20" height="20" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#" aria-label="Перейти на нашу страницу в Printerest.">
+                <svg class="page-footer__pinterest" width="22" height="22" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite.svg#pinterest"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#" aria-label="Перейти на нашу страницу в Фейсбуке.">
+                <svg class="page-footer__ok" width="20" height="20" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite.svg#ok"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__navigation">
           <div class="page-footer__online-store">
-            <h4>Интернет-магазин</h4>
+            <h4 class="page-footer__title">Интернет-магазин</h4>
             <ul class="page-footer__list">
               <li class="page-footer__item">
                 <a class="page-footer__link" href="#" aria-label="Перейти на страницу каталога продукции.">
@@ -462,7 +465,7 @@
             </ul>
           </div>
           <div class="page-footer__media">
-            <h4>Медиа</h4>
+            <h4 class="page-footer__title">Медиа</h4>
             <ul class="page-footer__list">
               <li class="page-footer__item">
                 <a class="page-footer__link" href="#" aria-label="Перейти на страницу блога.">
@@ -482,7 +485,7 @@
             </ul>
           </div>
           <div class="page-footer__contacts">
-            <h4>Контакты</h4>
+            <h4 class="page-footer__title">Контакты</h4>
             <ul class="page-footer__list">
               <li class="page-footer__item">
                 <address class="page-footer__address">
@@ -498,8 +501,9 @@
           </div>
         </div>
         <div class="page-footer__copyright">
-          <a class="page-footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу HTML-academy и научится верстать сайты.">
-            <svg class="page-footer__logo-html" width="12" height="16">
+          <a class="page-footer__html-academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу HTML-academy и научится верстать сайты.">
+            <span>Разработано в</span>
+            <svg class="page-footer__logo-html" width="118" height="16">
               <use xlink:href="img/sprite.svg#logo-html-academy"></use>
             </svg>
           </a>
