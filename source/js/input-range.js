@@ -1,6 +1,8 @@
 window.onload = () => {
   slideOne();
   slideTwo();
+  //onPriceMinChange();
+  //onPriceMaxChange();
 }
 
 let sliderOne = document.getElementById("range-price-min");

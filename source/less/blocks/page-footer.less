@@ -1,3 +1,7 @@
+.page-footer {
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
 .page-footer__header {
   display: flex;
   justify-content: space-between;
@@ -20,16 +24,32 @@
   padding-left: 0;
 }
 
-.page-footer__social .page-footer__link {
+.page-footer__link-social {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
+  border-radius: 4px;
 }
 
-.page-footer__social svg {
+.page-footer__link-social svg {
   fill: @base-grey;
+}
+
+.page-footer__link-social:hover,
+.page-footer__link-social:focus {
+  background-color: @base-secondary;
+}
+
+.page-footer__link-social:active {
+  background-color: @primary-opacity;
+}
+
+.page-footer__link-social:hover svg,
+.page-footer__link-social:focus svg,
+.page-footer__link-social:active svg {
+  fill: @base-primary;
 }
 
 .page-footer__list {
@@ -73,7 +93,7 @@
 .page-footer__online-store,
 .page-footer__media,
 .page-footer__contacts {
-  padding: 20px;
+  padding: 20px 20px 16px 20px;
   border-bottom: 1px solid @base-secondary;
 
   .page-footer__item {
@@ -196,6 +216,10 @@
 @media (min-width: @desktop-width) {
   .page-footer__logo-text {
     display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: @base-black;
   }
 
   .page-footer__wrapper {
@@ -207,6 +231,7 @@
   .page-footer__header {
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
   }
 
   .page-footer__navigation {

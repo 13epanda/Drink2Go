@@ -23,7 +23,7 @@ export const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(rename('style.css'))
+    .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
@@ -47,7 +47,7 @@ const scripts = () => {
 // Images
 
 const optimizeImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg,svg}')
+  return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'))
 }
@@ -84,6 +84,31 @@ const sprite = () => {
     .pipe(gulp.dest('build/img'));
 }
 
+
+// SWIPER
+
+/*
+const vendorJS = () => {
+  const modules = [
+    '../../node_modules/swiper/swiper-bundle.min.js',
+    '../../node_modules/swiper/swiper-bundle.min.js.map',
+  ];
+
+  return gulp.src(modules)
+    .pipe(gulp.dest('build/js'));
+}
+
+const vendorCSS = () => {
+  const modules = [
+    '../../node_modules/swiper/swiper-bundle.min.css',
+  ];
+
+  return gulp.src(modules)
+    .pipe(gulp.dest('build/css/pages'));
+}
+*/
+
+
 // Copy
 
 const copy = (done) => {
@@ -91,7 +116,7 @@ const copy = (done) => {
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
   ], {
-    base: 'src'
+    base: 'source'
   })
     .pipe(gulp.dest('build'))
   done();

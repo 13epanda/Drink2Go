@@ -16,13 +16,14 @@
   <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
   <link rel="manifest" href="../manifest.webmanifest">
 
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
 
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
 <header class="page-header">
-  <section class="page-header__wrapper">
+  <section class="page-header__wrapper page-content">
     <div class="page-header__wrapper-logo">
       <a class="page-header__logo">
         <picture>
@@ -102,53 +103,86 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="page-main__new-product new-product new-product--1">
-          <picture class="new-product__picture">
-            <source type="image/webp"  media="(min-width: 1440px)" srcset="img/desktop/flat_white_img.webp, img/desktop/flat_white_img@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/flat_white_img.webp, img/tablet/flat_white_img@2x.webp 2x">
-            <source type="image/webp"  srcset="img/mobile/flat_white_img.webp, img/mobile/flat_white_img@2x.webp 2x">
+          <div class="page-content">
+            <picture class="new-product__picture">
+              <source type="image/webp"  media="(min-width: 1440px)" srcset="img/desktop/flat_white_img.webp, img/desktop/flat_white_img@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/flat_white_img.webp, img/tablet/flat_white_img@2x.webp 2x">
+              <source type="image/webp"  srcset="img/mobile/flat_white_img.webp, img/mobile/flat_white_img@2x.webp 2x">
 
-            <source media="(min-width: 1440px)" srcset="img/desktop/flat_white_img.png, img/desktop/flat_white_img@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/tablet/flat_white_img.png, img/tablet/flat_white_img@2x.png 2x">
-            <img class="new-product__img" src="img/mobile/flat_white_img.png" srcset="img/mobile/flat_white_img@2x.png" width="280" height="280" alt="Декаф Флэт Уайт.">
-          </picture>
-          <p class="new-product__badge">Новинка!</p>
-          <h2 class="new-product__name">Декаф Флэт Уайт</h2>
-          <p class="new-product__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-          <div class="new-product__buy">
-            <p class="new-product__price"><del>295</del>225₽</p>
-            <a class="new-product__button button button-primary" href="#" aria-label="Заказать Декаф Флэт Уайт.">
-              <span>Заказать</span>
-            </a>
+              <source media="(min-width: 1440px)" srcset="img/desktop/flat_white_img.png, img/desktop/flat_white_img@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/tablet/flat_white_img.png, img/tablet/flat_white_img@2x.png 2x">
+              <img class="new-product__img" src="img/mobile/flat_white_img.png" srcset="img/mobile/flat_white_img@2x.png" width="280" height="280" alt="Декаф Флэт Уайт.">
+            </picture>
+            <p class="new-product__badge">Новинка!</p>
+            <h2 class="new-product__name">Декаф Флэт Уайт</h2>
+            <p class="new-product__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+            <div class="new-product__buy">
+              <p class="new-product__price"><del>295₽</del>225₽</p>
+              <a class="new-product__button button button-primary" href="#" aria-label="Заказать Декаф Флэт Уайт.">
+                <span>Заказать</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
       <div class="swiper-slide">
         <div class="page-main__new-product new-product new-product--2">
-          <picture class="new-product__picture">
-            <source type="image/webp"  media="(min-width: 1440px)" srcset="img/desktop/flat_white_img.webp, img/desktop/flat_white_img@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/flat_white_img.webp, img/tablet/flat_white_img@2x.webp 2x">
-            <source type="image/webp"  srcset="img/mobile/flat_white_img.webp, img/mobile/flat_white_img@2x.webp 2x">
+          <div class="page-content">
+            <picture class="new-product__picture">
+              <source type="image/webp"  media="(min-width: 1440px)" srcset="img/desktop/lavender_img.webp, img/desktop/lavender_img@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/lavender_img.webp, img/tablet/lavender_img@2x.webp 2x">
+              <source type="image/webp"  srcset="img/mobile/lavender_img.webp, img/mobile/lavender_img@2x.webp 2x">
 
-            <source media="(min-width: 1440px)" srcset="img/desktop/flat_white_img.png, img/desktop/flat_white_img@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/tablet/flat_white_img.png, img/tablet/flat_white_img@2x.png 2x">
-            <img class="new-product__img" src="img/mobile/flat_white_img.png" srcset="img/mobile/flat_white_img@2x.png" width="280" height="280" alt="Декаф Флэт Уайт.">
-          </picture>
-          <p class="new-product__badge">Новинка!</p>
-          <h2 class="new-product__name">Декаф Флэт Уайт</h2>
-          <p class="new-product__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-          <div class="new-product__buy">
-            <p class="new-product__price"><del>295</del>225₽</p>
-            <a class="new-product__button button button-primary" href="#" aria-label="Заказать Декаф Флэт Уайт.">
-              <span>Заказать</span>
-            </a>
+              <source media="(min-width: 1440px)" srcset="img/desktop/lavender_img.png, img/desktop/lavender_img@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/tablet/lavender_img.png, img/tablet/lavender_img@2x.png 2x">
+              <img class="new-product__img" src="img/mobile/lavender_img.png" srcset="img/mobile/lavender_img@2x.png" width="280" height="280" alt="Лавандовый Латте.">
+            </picture>
+            <p class="new-product__badge">Новинка!</p>
+            <h2 class="new-product__name">Лавандовый Латте</h2>
+            <p class="new-product__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+            <div class="new-product__buy">
+              <p class="new-product__price"><del>265₽</del>285₽</p>
+              <a class="new-product__button button button-primary" href="#" aria-label="Заказать Лавандовый Латте.">
+                <span>Заказать</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="page-main__new-product new-product new-product--3">
+          <div class="page-content">
+            <picture class="new-product__picture">
+              <source type="image/webp"  media="(min-width: 1440px)" srcset="img/desktop/espresso_img.webp, img/desktop/espresso_img@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/espresso_img.webp, img/tablet/espresso_img@2x.webp 2x">
+              <source type="image/webp"  srcset="img/mobile/espresso_img.webp, img/mobile/espresso_img@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" srcset="img/desktop/espresso_img.png, img/desktop/espresso_img@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/tablet/espresso_img.png, img/tablet/espresso_img@2x.png 2x">
+              <img class="new-product__img" src="img/mobile/espresso_img.png" srcset="img/mobile/espresso_img@2x.png" width="280" height="280" alt="Тройной Эспрессо.">
+            </picture>
+            <p class="new-product__badge">Новинка!</p>
+            <h2 class="new-product__name">Тройной Эспрессо</h2>
+            <p class="new-product__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+            <div class="new-product__buy">
+              <p class="new-product__price"><del>375₽</del>395₽</p>
+              <a class="new-product__button button button-primary" href="#" aria-label="Заказать Тройной Эспрессо.">
+                <span>Заказать</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="swiper-pagination swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal">
+      <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+      <span class="swiper-pagination-bullet"></span>
+      <span class="swiper-pagination-bullet"></span>
+    </div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
   </section>
-  <section class="page-main__advantages advantages">
+  <section class="page-main__advantages advantages page-content">
     <p class="advantages__subtitle">Преимущества</p>
     <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
     <ul class="advantages__list">
@@ -173,8 +207,8 @@
   <section class="page-main__catalog catalog">
     <p class="catalog__badge">Каталог</p>
     <h2 class="catalog__title">Каталог кофейных напитков</h2>
-    <div class="catalog__wrapper">
-      <form class="catalog__filters filters" action="https://echo.htmlacademy.ru/" method="get">
+    <div class="catalog__wrapper page-content">
+      <form class="catalog__filters filter" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset class="filter__group">
           <legend class="filter__title">Цена</legend>
           <div class="filter__range">
@@ -271,7 +305,7 @@
             </li>
           </ul>
         </fieldset>
-        <button class="filters__reset button button-secondary" type="reset">
+        <button class="filter__reset button button-secondary" type="reset">
           <span>Сбросить фильтр</span>
         </button>
       </form>
@@ -405,7 +439,7 @@
 
 <footer class="page-footer">
   <section class="page-footer__map map" id="map"></section>
-  <section class="page-footer__wrapper">
+  <section class="page-footer__wrapper page-content">
     <div class="page-footer__header">
       <a class="page-footer__logo">
         <picture>
@@ -416,21 +450,21 @@
       </a>
       <ul class="page-footer__social">
         <li class="page-footer__item">
-          <a class="page-footer__link" href="https://vk.com/htmlacademy" aria-label="Перейти на нашу страницу в Вконтакте.">
+          <a class="page-footer__link-social" href="https://vk.com/htmlacademy" aria-label="Перейти на нашу страницу в Вконтакте.">
             <svg class="page-footer__vkontakte" width="20" height="20" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#vk"></use>
             </svg>
           </a>
         </li>
         <li class="page-footer__item">
-          <a class="page-footer__link" href="#" aria-label="Перейти на нашу страницу в Printerest.">
+          <a class="page-footer__link-social" href="#" aria-label="Перейти на нашу страницу в Printerest.">
             <svg class="page-footer__pinterest" width="22" height="22" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#pinterest"></use>
             </svg>
           </a>
         </li>
         <li class="page-footer__item">
-          <a class="page-footer__link" href="#" aria-label="Перейти на нашу страницу в Фейсбуке.">
+          <a class="page-footer__link-social" href="#" aria-label="Перейти на нашу страницу в Фейсбуке.">
             <svg class="page-footer__ok" width="20" height="20" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#ok"></use>
             </svg>
@@ -504,7 +538,7 @@
       <a class="page-footer__html-academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу HTML-academy и научится верстать сайты.">
         <span>Разработано в</span>
         <span class="page-footer__logo-html-text">HTML Academy</span>
-        <svg class="page-footer__logo-html" width="118" height="16">
+        <svg class="page-footer__logo-html" width="12" height="16">
           <use xlink:href="img/sprite.svg#logo-html-academy"></use>
         </svg>
       </a>
@@ -513,8 +547,10 @@
 </footer>
 
 <script src="js/header-nav.js" type="text/javascript"></script>
-<script src="js/map.js" type="text/javascript"></script>
+
+<script src="js/slider.js" type="text/javascript"></script>
 <script src="js/input-range.js" type="text/javascript"></script>
+<script src="js/map.js" type="text/javascript"></script>
 
 </body>
 </html>

@@ -21,7 +21,7 @@
 }
 
 .new-product__badge {
-  margin: 0 0 4px 0;
+  margin: 6px 0 4px 0;
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
@@ -40,6 +40,7 @@
 }
 
 .new-product__description {
+  margin-top: 0;
   margin-bottom: 20px;
   font-weight: 400;
   font-size: 14px;
@@ -54,15 +55,33 @@
 }
 
 .new-product__price {
+  margin: 0;
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
 
   del {
-    margin-right: 8px;
+    margin-right: 6px;
     font-weight: 400;
     font-size: 16px;
     color: @base-primary;
   }
 
+}
+
+@media (min-width: @tablet-width) {
+  .new-product {
+    margin-bottom: 188px;
+  }
+  .new-product__picture {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+
+  .new-product__img {
+    width: 476px;
+    height: 476px;
+  }
 }

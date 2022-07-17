@@ -105,7 +105,7 @@ input::-webkit-inner-spin-button {
 .input-checkbox__input {
   width: 42px;
   height: 24px;
-  margin-right: 10px;
+  margin: 0 10px 0 0;
   border: 2px solid @base-grey;
   box-sizing: border-box;
   opacity: 0;
@@ -292,7 +292,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Стилизация для браузеров */
-
+/*
 .input-range__input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -306,7 +306,6 @@ input::-webkit-inner-spin-button {
   background-color: transparent;
   pointer-events: none;
 }
-
 .input-range__input::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   height: 4px;
@@ -351,12 +350,8 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   pointer-events: auto;
 }
+*/
 
-.input-range__input::-webkit-slider-thumb,
-.input-range__input::-moz-range-thumb,
-.input-range__input::-ms-thumb {
-  background-color: @primary-lighter;
-}
 /* SELECT */
 
 .select-control {
@@ -373,10 +368,6 @@ input::-webkit-inner-spin-button {
 .select-control:hover,
 .select-control:focus {
   background-color: @base-secondary;
-}
-
-.select-control:active {
-
 }
 
 @media (min-width: @tablet-width) {

@@ -1,4 +1,4 @@
-.filters {
+.filter {
   display: flex;
   flex-direction: column;
   row-gap: 24px;
@@ -31,11 +31,11 @@
 }
 
 .filter__range {
-  margin-top: 20px;
+  margin-top: 22px;
+}
 
-  .input-range {
-    margin-bottom: 22px;
-  }
+.filter__range .input-range {
+  margin-bottom: 22px;
 }
 
 .filter__scale {
@@ -51,8 +51,12 @@
   background-color: @base-grey;
 }
 
+.filter__reset {
+  margin-top: 10px;
+}
+
 @media (min-width: @tablet-width) {
-  .filters {
+  .filter {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -60,14 +64,15 @@
     padding-bottom: 40px;
   }
 
-  .filters__reset {
-    flex-grow: 1;
+  .filter__reset {
+    width: 100%;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .filters {
+  .filter {
     flex-direction: column;
+    justify-content: flex-start;
     width: 318px;
   }
 }
