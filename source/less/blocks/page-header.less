@@ -182,12 +182,13 @@
     position: relative;
     top: 0;
     padding: 0 20px;
+    margin-left: 5px;
   }
 
   .page-header__list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 20px;
+    column-gap: 0;
   }
 
   .page-header__item {
@@ -226,6 +227,7 @@
 
   .page-header__user-nav {
     margin-left: 0;
+    margin-right: 3px;
   }
 
   .page-header__user-link,
@@ -296,7 +298,10 @@
 
 @media (min-width: @desktop-width) {
   .page-header__wrapper {
-    max-width: 1440px;
-    margin: 0 auto;
+    padding-left: 40px;
+  }
+
+  .page-header__list {
+    justify-content: space-between;
   }
 }

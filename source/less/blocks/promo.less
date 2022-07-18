@@ -1,8 +1,11 @@
 .page-main__promo .swiper-button-prev,
 .page-main__promo .swiper-button-next {
-  width: 11px;
-  height: 20px;
+  width: 20px;
+  height: 100%;
+  top: 0;
   margin-top: -12px;
+  border: none;
+  background: none;
 }
 
 .page-main__promo .swiper-button-prev {
@@ -18,7 +21,7 @@
   content: "";
   width: 11px;
   height: 20px;
-  background-image: url("../img/icons/arrow.svg");
+  background-image: url("../img/icons/arrow-thin.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -33,5 +36,72 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-main__promo {
+    margin-bottom: 95px;
+    overflow: visible;
+  }
 
+  .page-main__promo .swiper-button-prev,
+  .page-main__promo .swiper-button-next {
+    width: 80px;
+    height: 100%;
+    margin-top: 0;
+    top: 0;
+  }
+
+  .page-main__promo .swiper-button-prev {
+    left: 0;
+  }
+
+  .page-main__promo .swiper-button-next {
+    right: 0;
+  }
+
+  .page-main__promo .swiper-button-prev:hover,
+  .page-main__promo .swiper-button-next:hover,
+  .page-main__promo .swiper-button-prev:focus,
+  .page-main__promo .swiper-button-next:focus {
+    background-color: @base-white;
+  }
+
+  .page-main__promo .swiper-button-prev:active,
+  .page-main__promo .swiper-button-next:active {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    margin-bottom: 22px;
+  }
+
+  .page-main__promo .swiper-pagination {
+    display: block;
+    bottom: 67px;
+  }
+
+  .page-main__promo .swiper-pagination-bullet {
+    width: 62px;
+    height: 4px;
+    border-radius: 0;
+    background-color: @base-white;
+  }
+
+  .page-main__promo .swiper-pagination-bullet:hover,
+  .page-main__promo .swiper-pagination-bullet:focus {
+    background-color: @primary-opacity;
+  }
+
+  .page-main__promo .swiper-pagination-bullet:active,
+  .page-main__promo .swiper-pagination-bullet-active {
+    background-color: @base-primary;
+  }
+
+  .page-main__promo .swiper-button-next {
+    left: calc(50% + 630px);
+  }
+
+  .page-main__promo .swiper-button-prev {
+    left: calc(50% - 710px);
+  }
 }
