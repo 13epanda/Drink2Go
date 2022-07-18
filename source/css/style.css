@@ -770,13 +770,13 @@ body {
   color: #333333;
 }
 .new-product--1 {
-  background: linear-gradient(180deg, #f3ebe1 0px, #f3ebe1 640px, rgba(0, 0, 0, 0) 640px, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(180deg, #f3ebe1 0%, #f3ebe1 640px, transparent 640px, transparent 100%);
 }
 .new-product--2 {
-  background: linear-gradient(180deg, #eae6fc 0px, #eae6fc 640px, rgba(0, 0, 0, 0) 640px, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(180deg, #eae6fc 0%, #eae6fc 640px, transparent 640px, transparent 100%);
 }
 .new-product--3 {
-  background: linear-gradient(180deg, #e5e6e8 0px, #e5e6e8 640px, rgba(0, 0, 0, 0) 640px, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(180deg, #e5e6e8 0%, #e5e6e8 640px, transparent 640px, transparent 100%);
 }
 .new-product__badge {
   margin: 6px 0 4px 0;
@@ -1064,7 +1064,7 @@ body {
 }
 .catalog__list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   row-gap: 19px;
   margin-top: 0;
