@@ -204,7 +204,7 @@
     position: relative;
   }
 
-  .page-header__link--active:after {
+  .page-header__link--active::after {
     position: absolute;
     content: "";
     bottom: 0;
@@ -235,8 +235,8 @@
     padding: 32px 22px;
   }
 
-  .page-header__user-link:before,
-  .page-header__cart-link:before {
+  .page-header__user-link::before,
+  .page-header__cart-link::before {
     top: 32px;
   }
 }
