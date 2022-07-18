@@ -1,8 +1,8 @@
 window.onload = () => {
   slideOne();
   slideTwo();
-  //onPriceMinChange();
-  //onPriceMaxChange();
+  onPriceMinChange();
+  onPriceMaxChange();
 }
 
 let sliderOne = document.getElementById("range-price-min");
@@ -53,5 +53,5 @@ const onPriceMaxChange = () => {
   slideTwo.value = displayValTwo.value;
 }
 
-displayValOne.addEventListener('change', onPriceChange);
-displayValTwo.addEventListener('change', onPriceChange);
+displayValOne.addEventListener('change', onPriceMinChange);
+displayValTwo.addEventListener('change', onPriceMaxChange);

@@ -705,13 +705,12 @@ body {
 }
 @media (min-width: 768px) {
   .page-main__promo {
-    margin-bottom: 95px;
-    overflow: visible;
+    margin-bottom: 0;
   }
   .page-main__promo .swiper-button-prev,
   .page-main__promo .swiper-button-next {
     width: 80px;
-    height: 100%;
+    height: 640px;
     margin-top: 0;
     top: 0;
   }
@@ -733,12 +732,9 @@ body {
   }
 }
 @media (min-width: 1440px) {
-  .promo {
-    margin-bottom: 22px;
-  }
   .page-main__promo .swiper-pagination {
     display: block;
-    bottom: 67px;
+    bottom: 70px;
   }
   .page-main__promo .swiper-pagination-bullet {
     width: 62px;
@@ -774,13 +770,13 @@ body {
   color: #333333;
 }
 .new-product--1 {
-  background-color: #f3ebe1;
+  background: linear-gradient(180deg, #f3ebe1 0px, #f3ebe1 640px, rgba(0, 0, 0, 0) 640px, rgba(0, 0, 0, 0) 100%);
 }
 .new-product--2 {
-  background-color: #eae6fc;
+  background: linear-gradient(180deg, #eae6fc 0px, #eae6fc 640px, rgba(0, 0, 0, 0) 640px, rgba(0, 0, 0, 0) 100%);
 }
 .new-product--3 {
-  background-color: #e5e6e8;
+  background: linear-gradient(180deg, #e5e6e8 0px, #e5e6e8 640px, rgba(0, 0, 0, 0) 640px, rgba(0, 0, 0, 0) 100%);
 }
 .new-product__badge {
   margin: 6px 0 4px 0;
@@ -827,13 +823,22 @@ body {
 @media (min-width: 768px) {
   .new-product {
     margin-bottom: 0;
-    padding: 54px 80px 308px;
+    padding: 54px 80px 496px;
+  }
+  .new-product--1 {
+    background-color: #f3ebe1;
+  }
+  .new-product--2 {
+    background-color: #eae6fc;
+  }
+  .new-product--3 {
+    background-color: #e5e6e8;
   }
   .new-product__picture {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -190px;
+    bottom: 0;
   }
   .new-product__img {
     width: 476px;
@@ -857,7 +862,7 @@ body {
 @media (min-width: 1440px) {
   .new-product {
     padding-top: 175px;
-    padding-bottom: 245px;
+    padding-bottom: 242px;
   }
   .new-product__wrapper {
     margin: 0 auto;
@@ -869,7 +874,7 @@ body {
     top: 30px;
     left: 50%;
     transform: translateX(-100%);
-    bottom: 0;
+    bottom: 84px;
   }
   .new-product__img {
     width: 600px;
@@ -959,7 +964,7 @@ body {
 }
 @media (min-width: 768px) {
   .advantages {
-    padding-top: 73px;
+    padding-top: 60px;
     padding-bottom: 85px;
   }
   .advantages__title {
