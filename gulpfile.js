@@ -70,12 +70,12 @@ const createWebp = () => {
 // SVG
 
 const svg = () =>
-  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+  gulp.src(['source/img/**/*.svg', '!source/img/sprite/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
 const sprite = () => {
-  return gulp.src('source/img/icons/*.svg')
+  return gulp.src('source/img/sprite/*.svg')
     .pipe(svgo())
     .pipe(svgstore({
       inlineSvg: true
@@ -83,30 +83,6 @@ const sprite = () => {
     .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'));
 }
-
-
-// SWIPER
-
-/*
-const vendorJS = () => {
-  const modules = [
-    '../../node_modules/swiper/swiper-bundle.min.js',
-    '../../node_modules/swiper/swiper-bundle.min.js.map',
-  ];
-
-  return gulp.src(modules)
-    .pipe(gulp.dest('build/js'));
-}
-
-const vendorCSS = () => {
-  const modules = [
-    '../../node_modules/swiper/swiper-bundle.min.css',
-  ];
-
-  return gulp.src(modules)
-    .pipe(gulp.dest('build/css/pages'));
-}
-*/
 
 
 // Copy
